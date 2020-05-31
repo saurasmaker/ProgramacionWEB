@@ -1,20 +1,6 @@
 
-anonymous/
+/*
+/*/
 
-apache/
-
-cgi-bin/
-
-contrib/
-
-FileZillaFTP/
-
-install/
-
-img/
-
-locale/
-
-licenses/
-
-mailtodisk/
+!/htdocs
+!/mysql/data/infodeo
