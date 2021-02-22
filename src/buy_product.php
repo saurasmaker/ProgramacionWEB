@@ -1,21 +1,22 @@
 <?php
-    session_start();
     
+    session_start();
+        
     $dbhost = "localhost";
     $dbusername = "root";
-    $dbpassword = "root";
+    $dbpassword = "";
     $dbname = "infodeo";
-    
+
     $dbconnection = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbname);
-    
+
     if(!$dbconnection) {
         die("No hat conexión: ".mysqli_connect_error());
     } 
-    
+
     if(!isset($_SESSION['logged_in_username'])){
         header("Panel: access_denied.php");
     }
-       
+    
     $new_id = generate_new_id($dbconnection);
     $idProduct = $_POST["IDPRODUCT"];
     $idUser = $_POST["IDUSER"];
@@ -25,7 +26,7 @@
 
     $_SESSION['IDBILL'] = $new_id;
     
-    header("Location: ../../index.php?ACTUAL_PAGE=purchase_realized");
+    header("Location: ../index.php?ACTUAL_PAGE=purchase_realized");
 ?>
 
 

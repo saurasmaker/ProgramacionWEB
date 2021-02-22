@@ -21,7 +21,7 @@
 
                     $dbhost = "localhost";
                     $dbusername = "root";
-                    $dbpassword = "root";
+                    $dbpassword = "";
                     $dbname = "infodeo";
                 
                     $dbconnection = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbname);
